@@ -14,7 +14,7 @@ set sql_safe_updates=0;
 
 
 
--- Removing the $ and ,  from the sales,Profit , Price per unit so we can make them in integers
+-- Removing the "$" and ","  from the sales,Profit , Price per unit so we can make them in integers
 update adidas_sales
 set Operating_Profit = replace(Operating_Profit,",","");
 
@@ -42,7 +42,7 @@ modify Operating_Profit int;
 alter table adidas_sales
 modify Total_Sales int;
 
--- Removing , from values of Unit_Sold column and converting it to integer
+-- Removing "," from values of Unit_Sold column and converting it to integer
 
 update adidas_sales
 set Units_Sold = replace(Units_Sold,",","");
@@ -51,7 +51,7 @@ alter table adidas_sales
 modify Units_Sold int;
 
 
--- Changing Operating Margin to integer
+-- Removing "%" and changing Operating Margin to integer
 
 update adidas_sales
 set Operating_Margin = replace(Operating_Margin,"%","");
