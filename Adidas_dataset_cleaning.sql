@@ -1,5 +1,6 @@
 create database adidas;
 
+-- selectin our database
 use adidas;
 
 -- getting an overview of the dataset
